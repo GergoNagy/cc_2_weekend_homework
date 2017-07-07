@@ -7,4 +7,9 @@ class Guest
     @money =money
   end
 
+  # def put_guest_in_room(guest)
+  #  @room.guests_in_room << guest
+  # end
+    
+
 end

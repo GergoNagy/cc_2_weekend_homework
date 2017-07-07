@@ -13,18 +13,30 @@ class TestRoom < MiniTest::Test
     @guest1 = Guest.new("Greg", 13)
     @guest2 = Guest.new("Fred", 76)
 
+    @song = Song.new("Song_1")
+    @song1 = Song.new("Song_2")
+    @song2 = Song.new("Song_3")
+
     @room = Room.new(2)
   end
 
 
   def test_room_is_empty
-    # @room.guests.count()
-    assert_equal(@room.guests.count(), @room.how_meny_guest_in_room)
+    assert_equal(@room.guests_in_room.count(), @room.how_meny_guest_in_room)
   end
-  # def test_put_guest_in_the_room
-  #   guests = @room.get_guest
-  #   assert_equal(@guest2.name, guests.name)
-  # end
+
+  def test_guest_in_room
+    @room.get_guest(@guest)
+    assert_equal(true, @room.guests_in_room.include?(@guest))    
+  end
+
+  def test_guest_out_room
+    @room.get_guest(@guest1)
+    # assert_equal(true, @room.guests_in_room.include?(@guest))
+    @room.get_out_guest
+    assert_equal(0, @room.guests_in_room.count)
+
+  end
 
 
 end
