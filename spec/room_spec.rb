@@ -22,7 +22,7 @@ class TestRoom < MiniTest::Test
 
 
   def test_room_is_empty
-    assert_equal(@room.guests_in_room.count(), @room.how_meny_guest_in_room)
+    assert_equal(@room.guests_in_room.count(), @room.how_many_guest_in_room)
   end
 
   def test_guest_in_room
