@@ -17,7 +17,11 @@ class Room
   end
 
   def get_out_guest
-    @guests_in_room.pop
+    @guests_in_room.clear
+  end
+
+  def get_song_in_room(song)
+    @songs_in_room << song
   end
 
 
