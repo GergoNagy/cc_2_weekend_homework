@@ -46,5 +46,10 @@ class TestRoom < MiniTest::Test
     assert_equal(@room.room_capacity, @room.room_capacity)
   end
 
+  # def test_guest_can_pay
+  #   @room.get_guest(@guest1)
+  #   assert_equal(@room.guest_can_pay, @room.guest_can_pay)
+  # end
+
 
 end

@@ -16,6 +16,8 @@ puts "\n"
 
 puts "It is #{@room.how_many_guest_in_room} people in the room."
 
+puts @room.guest_can_pay
+
 
 
 

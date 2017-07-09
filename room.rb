@@ -1,3 +1,4 @@
+require_relative('./guest')
 class Room
 
   attr_reader :guests_in_room, :songs_in_room, :size_of_the_room, :price_of_the_room
@@ -32,6 +33,15 @@ class Room
       return "Sorry we are full!"
     end
   end
+
+  # def guest_can_pay
+  #   cash = 
+  #   if cash >= @price_of_the_room 
+  #     return "You just payed #{cash - @price_of_the_room} for the room."
+  #   else 
+  #     return "You don\'t have #{price_of_the_room} money."
+  #   end
+  # end
 
 
 

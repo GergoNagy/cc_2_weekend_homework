@@ -20,10 +20,5 @@ class TestGuest < MiniTest::Test
     assert_equal(22, @guest.money)
   end
 
-  # def test_put_guest_in_room
-  #   assert_equal(@room.how_meny_guest_in_room, @room_guests_in_room.put_guest_in_room)
-
-  # end
-
 
 end
