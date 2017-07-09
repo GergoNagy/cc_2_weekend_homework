@@ -17,7 +17,7 @@ class TestRoom < MiniTest::Test
     @song1 = Song.new("Song_2")
     @song2 = Song.new("Song_3")
 
-    @room = Room.new(2)
+    @room = Room.new(2, 21)
   end
 
 
@@ -40,6 +40,10 @@ class TestRoom < MiniTest::Test
   def test_get_song_in_room
     @room.get_song_in_room(@song)
     assert_equal(true, @room.songs_in_room.include?(@song))
+  end
+
+  def test_room_capacity
+    assert_equal(@room.room_capacity, @room.room_capacity)
   end
 
 
